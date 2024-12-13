@@ -6,31 +6,16 @@ public class alistirma_02 {
 
 			 
 	public static void main(String[] args) {
-		int matematik,fizik,kimya,biyoloji,turkce,sosyal;
-		Scanner input= new Scanner(System.in);
-		System.out.println("matematik notunuzu girin:");
-		matematik=input.nextInt();
-		
-		System.out.println("fizik notunuzu girin:");
-		fizik=input.nextInt();
-
-		System.out.println("kimya notunuzu girin:");
-		kimya=input.nextInt();
-
-		System.out.println("biyoloji notunuzu girin:");
-		biyoloji=input.nextInt();
-
-		System.out.println("türkçe notunuzu girin:");
-		turkce=input.nextInt();
-
-		System.out.println("sosyal notunuzu girin:");
-		sosyal=input.nextInt();
-
-double ortalama=matematik+fizik+kimya+biyoloji+sosyal+turkce;
-ortalama=ortalama/6;
-System.out.println(ortalama>50? "gectiniz": "kaldınız");
-			input.close();
+		Scanner scanner= new Scanner(System.in);
+		System.out.println("urun fiyatını girin:");
+		int price=scanner.nextInt();
+		if (price<1000 && price>0) {
+			System.out.println("fiyat:"+price+" tl\nkdv:"+(price*0.18)+" tl");
 			
+		}else {
+			System.out.println("fiyat:"+price+" tl\nkdv:"+(price*0.08)+" tl");
+		}
+		scanner.close();
 	}
 
 }
